@@ -11,7 +11,7 @@ For now you will need to run the Python code and install the needed libraries.
 
 If it is not clear to you how to do this, my code may not be of help to you. I am interested in making this more accessible, so add an issue and if I have the time I'll try and explain better and add to this README. Maybe one day it ill be an installable application, but for now it is just some scripts.
 
-I'm using Windows, so the instructions are focused there. If you are on Linux, this should be easy for you. Apple user I will be happy to help, but will be Googling for any hard issues.
+I'm using Windows, so the instructions are focused there. If you are on Linux, this should be easy for you. For Apple users, I am happy to help, but am least familiar with this OS. In theory, this should work on all 3 platforms.
 
 ### Prerequisites
 
@@ -60,22 +60,21 @@ Use pip:
 ```
 pip install lds-org
 ```
-You will need to get into the code and change:
+You will need to get into the org_chart.py and sub_org.py and change:
+```python
+ with lds_org.session(creds.usr, creds.pwd) as lds:
 ```
-creds.usr
+to your lds.org username and password, as shown.
+```python
+ with lds_org.session('your_lds.org_username', 'your_lds.og_password') as lds:
 ```
-to your lds.org username and
-```
-creds.pwd
-```
-to your lds.org password.
 
 Optionally, you could create a file named creds.py with the following contents:
 ```python
 usr='your_lds.org_username'
 pwd='your_lds.og_password'
 ```
-Where you replace the text placeholders with your actual username and password.
+For both methods you actually need to replace the text placeholders with your actual username and password.
 
 #### Grab The Code
 
