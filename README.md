@@ -1,7 +1,9 @@
 # LDS Ward Callings
 
 If you are an LDS Ward Clerk or Bishopric member you may have the need to view all the members of the ward and their callings.
-This Python 3 code pulls the data that you are authorized to view from lds.org via the official API and then formats it, builds some html pages and writes a PDF document for printing.
+This Python 3 code pulls the data that you are authorized to view from lds.org via the official API, formats it, builds some html pages, and writes a PDF document for printing.
+
+![Demo Web Page](/demoimg.png?raw=true "Demo Web Page")
 
 ## Getting Started
 
@@ -66,3 +68,10 @@ usr='your_lds.org_username'
 pwd='your_lds.og_password'
 ```
 Where you replace the text placeholders with your actual username and password.
+
+#### Grab The Code
+
+Download the zip or git clone.
+
+### Use
+
