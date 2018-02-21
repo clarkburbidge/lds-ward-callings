@@ -25,8 +25,7 @@ I'm using Windows, so the instructions are focused there. If you are on Linux, t
 
 ### Installation
 #### Python 3
-[Download](https://www.python.org/downloads/) the Python installer 
-Install Python with the downloaded .exe. Include the option to add Python to yor Windows PATH.
+[Download](https://www.python.org/downloads/) the Python installer. Install Python with the downloaded .exe. Include the option to add Python to your Windows PATH.
 From your favorite commandline tool, (Start >> cmd >> Enter), the following result confirms a valid install:
 ```commandline
 >python -V
