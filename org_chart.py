@@ -1,18 +1,18 @@
 from sub_orgs import abr_call, arrange_name, get_sub_orgs_callings
+import creds
 
 
 def get_callings():
     import json
     import lds_org
-    from os import environ
-    with lds_org.session(environ.get('LDSORG_USERNAME'), environ.get('LDSORG_PASSWORD')) as lds:
+    with lds_org.session(creds.usr, creds.pwd) as lds:
         rv = lds.get('callings-with-dates')
         members = get_members_callings(rv)
         sub_orgs = get_sub_orgs_callings()
         org_chart = get_org_chart(rv, members)
         org_chart = merge_dicts(sub_orgs, org_chart)
-    with open('C:\\Dev\\Python\\LDSIO\\json_formats\\org_chart_dict.json', 'w+') as f1:
-        json.dump(org_chart, f1, indent=4)
+    # with open('C:\\Dev\\Python\\LDSIO\\json_formats\\org_chart_dict.json', 'w+') as f1:
+    #     json.dump(org_chart, f1, indent=4)
     return org_chart
 
 

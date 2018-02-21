@@ -17,6 +17,7 @@ If it is not clear to you how to do this, my code may not be of help to you. I a
 4. [Dominate](https://github.com/Knio/dominate)
 5. [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html)
 6. pdfkit
+lds-org - 
 
 ### Installation
 ####Python 3
@@ -30,11 +31,38 @@ Use pip:
 ```
 pip install dominate
 ```
+#### Install wkhtmltopdf
 
-https://wkhtmltopdf.org/downloads.html
+[Download](https://wkhtmltopdf.org/downloads.html) the install file for your OS. Run the install and then add the location to the .exe to your Windows PATH.
+For me the path to add was:
+```
+C:\Program Files\wkhtmltopdf\bin
+```
+[Here is a PATH how to.](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/)
 
 ####Install pdfkit
 Use pip:
 ```
 pip install pdfkit
 ```
+####Install LDS-org
+Use pip:
+```
+pip install lds-org
+```
+You will need to get into the code and change:
+```
+creds.usr
+```
+to your lds.org username and
+```
+creds.pwd
+```
+to your lds.org password.
+
+Optionally, you could create a file named creds.py with the following contents:
+```python
+usr='your_lds.org_username'
+pwd='your_lds.og_password'
+```
+Where you replace the text placeholders with your actual username and password.

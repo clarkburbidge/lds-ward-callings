@@ -2,10 +2,10 @@
 
 def get_sub_orgs_callings():
     import lds_org
+    import creds
     import json
-    from os import environ
     d = {}
-    with lds_org.session(environ.get('LDSORG_USERNAME'), environ.get('LDSORG_PASSWORD')) as lds:
+    with lds_org.session(creds.usr, creds.pwd) as lds:
         rv = lds.get('https://lds.org/mls/mbr/services/orgs/sub-orgs-with-callings?lang=eng')
         for org in rv.json():
             orgName = org_name_replace(org['defaultOrgName'])
@@ -19,8 +19,8 @@ def get_sub_orgs_callings():
                     # print_calling(call)
                     dict_calling(d, orgName, call)
 
-    with open('C:\\Dev\\Python\\LDSIO\\json_formats\\subOrgDict.json', 'w+') as f1:
-        json.dump(d, f1, indent=4)
+    # with open('C:\\Dev\\Python\\LDSIO\\json_formats\\subOrgDict.json', 'w+') as f1:
+    #     json.dump(d, f1, indent=4)
     return d
 
 
