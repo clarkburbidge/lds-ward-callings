@@ -20,13 +20,13 @@ If it is not clear to you how to do this, my code may not be of help to you. I a
 lds-org - 
 
 ### Installation
-####Python 3
+#### Python 3
 [Download](https://www.python.org/downloads/) the Python installer 
 
-####VirtualEnv
+#### VirtualEnv
 Optional, but a good idea, use a [Python Virtual Environment](https://docs.python.org/3/library/venv.html)
 
-####Install [Dominate](https://github.com/Knio/dominate) 
+#### Install [Dominate](https://github.com/Knio/dominate) 
 Use pip:
 ```
 pip install dominate
@@ -40,12 +40,12 @@ C:\Program Files\wkhtmltopdf\bin
 ```
 [Here is a PATH how to.](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/)
 
-####Install pdfkit
+#### Install pdfkit
 Use pip:
 ```
 pip install pdfkit
 ```
-####Install LDS-org
+#### Install LDS-org
 Use pip:
 ```
 pip install lds-org
