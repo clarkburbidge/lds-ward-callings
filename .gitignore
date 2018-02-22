@@ -2,3 +2,4 @@
 *.html
 *.pdf
 __pycache__/
+/images
